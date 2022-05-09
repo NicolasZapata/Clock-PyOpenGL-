@@ -1,0 +1,70 @@
+\documentclass[flegn, 10pt]{report}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[font=scriptsize]{caption}
+\usepackage{amssymb,amsmath}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{listings}
+\usepackage[document]{ragged2e}
+\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{geometry}
+  \geometry{
+    a4paper,
+    total={170mm, 257mm},
+    left=20mm,
+    top=20mm,
+  }
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue,
+}
+
+\setlength{\parskip}{10px}
+\definecolor{linequote}{RGB}{224,215,188}
+\definecolor{backquote}{RGB}{249,245,233}
+
+\newtcolorbox{myquote}{% Cuadro de referencia
+  enhanced, breakable, 
+  size=fbox,
+  frame hidden, boxrule=0pt,
+  sharp corners,
+  colback=backquote,
+  borderline horizontal={.5pt}{0pt}{linequote},
+  borderline horizontal={.5pt}{1pt}{linequote}
+}
+
+\pagestyle{headings}
+
+\begin{document}
+  \begin{titlepage}
+    \centering
+    {\includegraphics[width=0.8\textwidth]{unircol.png}\par}
+    \vspace{1cm}
+    {\bfseries\LARGE Fundación Universitaria Internacional De La Rioja \par}
+    \vspace{1cm}
+    {\scshape\Large PREGRADO DE INGENIERÍA INFORMÁTICA \par}
+    \vspace{3cm}
+    {\scshape\Huge Introducción a OpenGL \par}
+    \vspace{3cm}
+    {\itshape\Large Informática Gráfica y Visualización (COLGII) - Enero2022 \par}  
+    \vfill
+    {\Large Docente: \par}
+    {\Large Rogerio Orlando Beltr\'an Castro \par}
+    \vfill
+    {\Large Autor: \par}
+    {\Large Nicolás Zapata \'Alzate \par} 
+    \vfill
+    {\Large Abril de 2022 \par}
+  \end{titlepage}
+
+  \tableofcontents
+  \newpage
+  \input{./chapters/chapter00.tex}
+  \input{./chapters/chapter01.tex}
+  \input{./chapters/chapter02.tex}
+  \input{./chapters/chapter03.tex}
+\end{document}
